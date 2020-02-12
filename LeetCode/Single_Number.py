@@ -1,7 +1,12 @@
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
-        for num in nums:
-            if nums.count(num) == 1:
-                return num
+        nums = sorted(nums)
+        length = len(nums)
+        i = 0
+        while i < length:
+            if i == length -1:
+                return nums[i]
+            elif nums[i] == nums[i+1]:
+                i+=2
             else:
-                continue
+                return nums[i]
