@@ -10,10 +10,10 @@ class Solution:
                 
             elif character in closing:
                 if len(stack) == 0:
-                    return "false"
+                    return False
                 elif opening.index(stack.pop()) != closing.index(character):
-                    return "false"
+                    return False
                 
         if len(stack) != 0:
-            return "false"
-        return "true"
+            return False
+        return True
