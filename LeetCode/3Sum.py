@@ -6,6 +6,8 @@ class Solution:
         for i in range(0,len(nums)-2):
             if i >= 1 and nums[i] == nums[i-1]:
                 continue
+            elif nums[i] > 0:
+                return list(result)
             else:
                 lower = i+1
                 upper = len(nums) -1 
